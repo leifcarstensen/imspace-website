@@ -1,0 +1,11 @@
+{
+  "name": "twohearts-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Two Hearts app",
+  "scripts": {
+    "dev": "npx http-server -p 8080"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1"
+  }
+}
