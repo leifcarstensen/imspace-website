@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5HN9MDD6L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R5HN9MDD6L');
+    </script>
+
+    <title>Impressum - ImSpace</title>
+    <meta name="description" content="Impressum der ImSpace App. Angaben gem&auml;&szlig; &sect; 5 TMG.">
+    <link rel="icon" type="image/png" href="../assets/Splash_Logo_Dark.png">
+    <link rel="apple-touch-icon" href="../assets/Splash_Logo_Dark.png">
+    <link rel="canonical" href="https://imspaceapp.com/de/impressum">
+    <link rel="stylesheet" href="../styles.css?v=12">
+</head>
+<body>
+
+    <nav class="navbar scrolled">
+        <div class="nav-content">
+            <a href="/de/" class="logo">
+                <img src="../assets/LogoDark.svg" alt="ImSpace" class="logo-img">
+            </a>
+            <div class="nav-center">
+                <a href="/de/" class="nav-link">Home</a>
+                <a href="/de/privacy" class="nav-link">Datenschutz</a>
+                <a href="/de/terms" class="nav-link">AGB</a>
+                <a href="mailto:info@voicebeam.de" class="nav-link">Kontakt</a>
+            </div>
+            <div class="nav-right">
+                <a href="/impressum" class="nav-link lang-switch" title="English">EN</a>
+                <a href="/de/" class="nav-cta">Download</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Men&uuml;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="/de/" class="mobile-menu-link">Home</a>
+            <a href="/de/privacy" class="mobile-menu-link">Datenschutz</a>
+            <a href="/de/terms" class="mobile-menu-link">AGB</a>
+            <a href="mailto:info@voicebeam.de" class="mobile-menu-link">Kontakt</a>
+            <a href="/impressum" class="mobile-menu-link">English</a>
+            <a href="/de/" class="mobile-menu-cta">Download</a>
+        </div>
+    </nav>
+
+    <script>
+    (function() {
+        var hamburger = document.getElementById('hamburger');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+            });
+            var menuLinks = mobileMenu.querySelectorAll('a');
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                });
+            }
+        }
+    })();
+    </script>
+
+    <main class="legal-page">
+        <div class="legal-content">
+            <h1>Impressum</h1>
+            <p class="legal-updated">Angaben gem&auml;&szlig; &sect; 5 TMG</p>
+
+            <h2>Verantwortlich</h2>
+            <p>
+                <strong>VoiceBeam GmbH</strong><br>
+                Erzgie&szlig;ereistr. 42<br>
+                80335 M&uuml;nchen<br>
+                Deutschland
+            </p>
+
+            <h2>Vertreten durch</h2>
+            <p>Gesch&auml;ftsf&uuml;hrer: Leif Carstensen, Quirin Schweigert</p>
+
+            <h2>Kontakt</h2>
+            <p>
+                E-Mail: <a href="mailto:info@voicebeam.de">info@voicebeam.de</a>
+            </p>
+
+            <h2>Handelsregister</h2>
+            <p>
+                Eingetragen beim Amtsgericht M&uuml;nchen<br>
+                Registernummer: HRB 276035
+            </p>
+
+            <h2>Umsatzsteuer-Identifikationsnummer</h2>
+            <p>USt-IdNr. gem&auml;&szlig; &sect; 27a UStG: DE354545625</p>
+
+            <h2>Redaktionell verantwortlich</h2>
+            <p>Leif Carstensen, Quirin Schweigert</p>
+
+            <h2>Streitbeilegung</h2>
+            <p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/de/privacy">Datenschutz</a>
+                <a href="/de/terms">AGB</a>
+                <a href="/de/impressum">Impressum</a>
+                <a href="mailto:info@voicebeam.de">Kontakt</a>
+            </div>
+            <p class="copyright">&copy; 2026 VoiceBeam GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
