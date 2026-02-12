@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:rapidreaderapp.com)",
+      "Bash(sips:*)",
+      "Bash(open:*)",
+      "Bash(curl:*)",
+      "Bash(npx http-server:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial release: Two Hearts landing page\n\nComplete landing page for twoheartsapp.com with hero, features carousel,\ntestimonials, FAQ, privacy policy, and terms of service. Pure HTML/CSS/JS,\nready for Vercel deployment.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh repo view:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(ssh:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo edit:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Google Analytics \\(G-R5HN9MDD6L\\) to all pages\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Vercel Analytics and Speed Insights to all pages\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npx vercel:*)",
+      "Bash(gh api:*)",
+      "Bash(vercel whoami:*)",
+      "WebFetch(domain:www.twoheartsapp.com)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nTrigger redeploy: ensure Google Analytics tag is deployed\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(lsof:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

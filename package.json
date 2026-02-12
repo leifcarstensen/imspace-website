@@ -1,7 +1,7 @@
 {
-  "name": "twohearts-landing",
+  "name": "imspace-landing",
   "version": "1.0.0",
-  "description": "Landing page for Two Hearts app",
+  "description": "Landing page for ImSpace - Your space to create beautiful images",
   "scripts": {
     "dev": "npx http-server -p 8080"
   },
