@@ -173,6 +173,23 @@ a {
     color: var(--secondary);
 }
 
+.lang-switch {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    background: rgba(0, 0, 0, 0.04);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease, background 0.2s ease;
+    margin-right: var(--space-sm);
+}
+
+.lang-switch:hover {
+    color: var(--secondary);
+    background: rgba(240, 84, 90, 0.08);
+}
+
 .nav-cta {
     background: var(--gradient);
     color: var(--text-light);

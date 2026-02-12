@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5HN9MDD6L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R5HN9MDD6L');
+    </script>
+
+    <title>Impressum - ImSpace</title>
+    <meta name="description" content="Impressum / Legal Notice for ImSpace.">
+    <link rel="icon" type="image/png" href="assets/Splash_Logo_Dark.png">
+    <link rel="apple-touch-icon" href="assets/Splash_Logo_Dark.png">
+    <link rel="canonical" href="https://imspace.app/impressum.html">
+    <link rel="stylesheet" href="styles.css?v=11">
+</head>
+<body>
+
+    <nav class="navbar scrolled">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="assets/LogoDark.svg" alt="ImSpace" class="logo-img">
+            </a>
+            <div class="nav-center">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/privacy.html" class="nav-link">Privacy</a>
+                <a href="/terms.html" class="nav-link">Terms</a>
+                <a href="mailto:hello@imspace.app" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="/de/" class="nav-link lang-switch" title="Deutsch">DE</a>
+                <a href="/" class="nav-cta">Download</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="/" class="mobile-menu-link">Home</a>
+            <a href="/privacy.html" class="mobile-menu-link">Privacy</a>
+            <a href="/terms.html" class="mobile-menu-link">Terms</a>
+            <a href="mailto:hello@imspace.app" class="mobile-menu-link">Contact</a>
+            <a href="/de/" class="mobile-menu-link">Deutsch</a>
+            <a href="/" class="mobile-menu-cta">Download</a>
+        </div>
+    </nav>
+
+    <script>
+    (function() {
+        var hamburger = document.getElementById('hamburger');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+            });
+            var menuLinks = mobileMenu.querySelectorAll('a');
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                });
+            }
+        }
+    })();
+    </script>
+
+    <main class="legal-page">
+        <div class="legal-content">
+            <h1>Impressum</h1>
+            <p class="legal-updated">Legal Notice pursuant to &sect; 5 TMG</p>
+
+            <h2>Responsible entity</h2>
+            <p>
+                <strong>VoiceBeam GmbH</strong><br>
+                [Address line 1]<br>
+                [Postal code, City]<br>
+                Germany
+            </p>
+
+            <h2>Represented by</h2>
+            <p>[Managing Director name(s)]</p>
+
+            <h2>Contact</h2>
+            <p>
+                Email: <a href="mailto:hello@imspace.app">hello@imspace.app</a>
+            </p>
+
+            <h2>Commercial Register</h2>
+            <p>
+                Registered at: [Amtsgericht / Local Court]<br>
+                Registration number: [HRB number]
+            </p>
+
+            <h2>VAT Identification Number</h2>
+            <p>VAT ID pursuant to &sect; 27a UStG: [DE number]</p>
+
+            <h2>Editorial responsibility</h2>
+            <p>[Name of responsible person pursuant to &sect; 55 Abs. 2 RStV]</p>
+
+            <h2>Dispute resolution</h2>
+            <p>The European Commission provides a platform for online dispute resolution (OS): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+                <a href="/impressum.html">Impressum</a>
+                <a href="mailto:hello@imspace.app">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 VoiceBeam GmbH. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
