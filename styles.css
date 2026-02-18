@@ -407,15 +407,9 @@ a {
 }
 
 .hero-mockup-1 {
-    width: 475px;
-    transform: rotate(-2deg) translateX(-20px);
+    width: 712px;
+    transform: rotate(-2deg) translateX(40px);
     z-index: 1;
-}
-
-.hero-mockup-2 {
-    width: 180px;
-    transform: rotate(6deg) translate(150px, 120px);
-    z-index: 2;
 }
 
 /* --- Value Proposition --- */
@@ -1261,9 +1255,10 @@ a {
 
 .final-cta-logo {
     width: 72px;
-    height: 72px;
+    height: auto;
     margin: 0 auto var(--space-xl);
     border-radius: var(--radius-lg);
+    object-fit: contain;
 }
 
 .final-cta-headline {
@@ -1422,12 +1417,7 @@ a {
     }
 
     .hero-mockup-1 {
-        width: 400px;
-    }
-
-    .hero-mockup-2 {
-        width: 150px;
-        transform: rotate(6deg) translate(120px, 80px);
+        width: 600px;
     }
 
     .use-cases-grid {
@@ -1528,13 +1518,8 @@ a {
     }
 
     .hero-mockup-1 {
-        width: 325px;
+        width: 488px;
         transform: rotate(-2deg) translateX(-10px);
-    }
-
-    .hero-mockup-2 {
-        width: 130px;
-        transform: rotate(5deg) translate(90px, 60px);
     }
 
     .hero-mockups {
@@ -1630,13 +1615,8 @@ a {
     }
 
     .hero-mockup-1 {
-        width: 275px;
+        width: 412px;
         transform: rotate(-2deg) translateX(-10px);
-    }
-
-    .hero-mockup-2 {
-        width: 110px;
-        transform: rotate(5deg) translate(70px, 50px);
     }
 
     .hero-mockups {

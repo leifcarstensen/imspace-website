@@ -172,11 +172,7 @@
                         <h3 class="feature-card-title">Kosten vorher sehen</h3>
                         <p class="feature-card-desc">Sieh genau, wie viele Credits jede Kreation kostet, bevor du sie erstellst. Keine Überraschungen, nur schöne Bilder.</p>
                     </div>
-                    <div class="feature-card" data-image="../assets/DE4.png" data-index="3">
-                        <h3 class="feature-card-title">Hochwertige Ergebnisse</h3>
-                        <p class="feature-card-desc">Erhalte beeindruckende, hochauflösende Bilder, die du in Social Media teilen, drucken oder als Erinnerungen speichern kannst.</p>
-                    </div>
-                    <div class="feature-card" data-image="../assets/DE5.png" data-index="4">
+                    <div class="feature-card" data-image="../assets/DE5.png" data-index="3">
                         <h3 class="feature-card-title">Funktioniert auf der Apple Watch</h3>
                         <p class="feature-card-desc">Durchstöbere deine Kreationen und starte neue direkt vom Handgelenk. ImSpace ist immer dabei.</p>
                     </div>
@@ -189,7 +185,6 @@
                 <span class="dot" data-index="1"></span>
                 <span class="dot" data-index="2"></span>
                 <span class="dot" data-index="3"></span>
-                <span class="dot" data-index="4"></span>
             </div>
 
             <!-- Mobile Version -->
@@ -200,7 +195,6 @@
                             <div class="carousel-slide"><img src="../assets/DE1.png" alt="Dutzende Stile"></div>
                             <div class="carousel-slide"><img src="../assets/DE2.png" alt="Kreativitätsregler"></div>
                             <div class="carousel-slide"><img src="../assets/DE3.png" alt="Kosten vorher sehen"></div>
-                            <div class="carousel-slide"><img src="../assets/DE4.png" alt="Hochwertige Ergebnisse"></div>
                             <div class="carousel-slide"><img src="../assets/DE5.png" alt="Funktioniert auf der Apple Watch"></div>
                         </div>
                     </div>
@@ -218,7 +212,6 @@
                     <span class="dot" data-index="1"></span>
                     <span class="dot" data-index="2"></span>
                     <span class="dot" data-index="3"></span>
-                    <span class="dot" data-index="4"></span>
                 </div>
             </div>
         </div>
@@ -683,14 +676,13 @@
         var carouselDots = document.querySelectorAll('#carousel-dots .dot');
         var prevBtn = document.getElementById('carousel-prev');
         var nextBtn = document.getElementById('carousel-next');
-        var totalSlides = 5;
+        var totalSlides = 4;
         var currentSlide = 0;
 
         var featureData = [
             { title: 'Dutzende Stile', desc: 'Durchstöbere eine wachsende Bibliothek kreativer Stile. Von Anime und Cartoon bis Retro-Digicam und Ölgemälde.' },
             { title: 'Kreativitätsregler', desc: 'Stelle genau ein, wie viel kreative Freiheit du möchtest. Von subtilen Anpassungen bis zur völligen künstlerischen Neuinterpretation.' },
             { title: 'Kosten vorher sehen', desc: 'Sieh genau, wie viele Credits jede Kreation kostet, bevor du sie erstellst. Keine Überraschungen, nur schöne Bilder.' },
-            { title: 'Hochwertige Ergebnisse', desc: 'Erhalte beeindruckende, hochauflösende Bilder, die du in Social Media teilen, drucken oder als Erinnerungen speichern kannst.' },
             { title: 'Funktioniert auf der Apple Watch', desc: 'Durchstöbere deine Kreationen und starte neue direkt vom Handgelenk. ImSpace ist immer dabei.' }
         ];
 
