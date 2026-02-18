@@ -1259,6 +1259,13 @@ a {
     text-align: center;
 }
 
+.final-cta-logo {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto var(--space-xl);
+    border-radius: var(--radius-lg);
+}
+
 .final-cta-headline {
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 800;

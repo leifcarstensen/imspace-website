@@ -34,9 +34,9 @@
     <meta name="twitter:image" content="https://imspaceapp.com/assets/og-image.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/Splash_Logo_Dark.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/Splash_Logo_Dark.png">
-    <link rel="apple-touch-icon" href="assets/Splash_Logo_Dark.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/FavIcon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/FavIcon.png">
+    <link rel="apple-touch-icon" href="assets/FavIcon.png">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://imspaceapp.com/">
@@ -107,8 +107,7 @@
                 </div>
 
                 <div class="hero-mockups">
-                    <img src="assets/mock1.png" alt="ImSpace app showing style selection for pet photos" class="hero-mockup hero-mockup-1">
-                    <img src="assets/mock2.png" alt="ImSpace app showing a transformed image" class="hero-mockup hero-mockup-2">
+                    <img src="assets/HeroEN.png" alt="ImSpace app showing style selection and transformed images" class="hero-mockup hero-mockup-1">
                 </div>
             </div>
         </div>
@@ -159,24 +158,28 @@
             <!-- Desktop Version -->
             <div class="features-desktop">
                 <div class="features-phone-container">
-                    <img id="feature-phone" src="assets/mock1.png" alt="Feature screenshot">
+                    <img id="feature-phone" src="assets/EN1.png" alt="Feature screenshot">
                 </div>
                 <div class="features-cards">
-                    <div class="feature-card active" data-image="assets/mock1.png" data-index="0">
+                    <div class="feature-card active" data-image="assets/EN1.png" data-index="0">
                         <h3 class="feature-card-title">Dozens of styles</h3>
                         <p class="feature-card-desc">Browse a growing library of creative styles. From anime and cartoon to retro digicam and oil painting — find the perfect look.</p>
                     </div>
-                    <div class="feature-card" data-image="assets/mock3.png" data-index="1">
+                    <div class="feature-card" data-image="assets/EN2.png" data-index="1">
                         <h3 class="feature-card-title">Creativity control</h3>
                         <p class="feature-card-desc">Dial in exactly how much creative freedom you want. From subtle touch-ups to full artistic reimagination.</p>
                     </div>
-                    <div class="feature-card" data-image="assets/mock4.png" data-index="2">
+                    <div class="feature-card" data-image="assets/EN3.png" data-index="2">
                         <h3 class="feature-card-title">Know the cost upfront</h3>
                         <p class="feature-card-desc">See exactly how many credits each creation will cost before you generate. No surprises, just beautiful images.</p>
                     </div>
-                    <div class="feature-card" data-image="assets/mock2.png" data-index="3">
+                    <div class="feature-card" data-image="assets/EN4.png" data-index="3">
                         <h3 class="feature-card-title">High-quality results</h3>
                         <p class="feature-card-desc">Get stunning, high-resolution images ready to share on social media, print, or save as lasting memories.</p>
+                    </div>
+                    <div class="feature-card" data-image="assets/EN5.png" data-index="4">
+                        <h3 class="feature-card-title">Works on Apple Watch</h3>
+                        <p class="feature-card-desc">Browse your creations and start new ones right from your wrist. ImSpace goes wherever you go.</p>
                     </div>
                 </div>
             </div>
@@ -187,6 +190,7 @@
                 <span class="dot" data-index="1"></span>
                 <span class="dot" data-index="2"></span>
                 <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
             </div>
 
             <!-- Mobile Version -->
@@ -194,10 +198,11 @@
                 <div class="carousel-wrapper">
                     <div class="carousel-images-container">
                         <div class="carousel-track" id="carousel-track">
-                            <div class="carousel-slide"><img src="assets/mock1.png" alt="Dozens of styles"></div>
-                            <div class="carousel-slide"><img src="assets/mock3.png" alt="Creativity control"></div>
-                            <div class="carousel-slide"><img src="assets/mock4.png" alt="Know the cost upfront"></div>
-                            <div class="carousel-slide"><img src="assets/mock2.png" alt="High-quality results"></div>
+                            <div class="carousel-slide"><img src="assets/EN1.png" alt="Dozens of styles"></div>
+                            <div class="carousel-slide"><img src="assets/EN2.png" alt="Creativity control"></div>
+                            <div class="carousel-slide"><img src="assets/EN3.png" alt="Know the cost upfront"></div>
+                            <div class="carousel-slide"><img src="assets/EN4.png" alt="High-quality results"></div>
+                            <div class="carousel-slide"><img src="assets/EN5.png" alt="Works on Apple Watch"></div>
                         </div>
                     </div>
                     <div class="carousel-arrows">
@@ -214,6 +219,7 @@
                     <span class="dot" data-index="1"></span>
                     <span class="dot" data-index="2"></span>
                     <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
                 </div>
             </div>
         </div>
@@ -535,6 +541,7 @@
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
+            <img src="assets/Splash_Logo.png" alt="ImSpace" class="final-cta-logo">
             <h2 class="final-cta-headline">Start creating beautiful images today.</h2>
             <p class="final-cta-text">Free to download. Pick a style, snap a photo, and see the magic happen.</p>
             <a href="#" class="app-store-link" id="cta-download">
@@ -686,14 +693,15 @@
         var carouselDots = document.querySelectorAll('#carousel-dots .dot');
         var prevBtn = document.getElementById('carousel-prev');
         var nextBtn = document.getElementById('carousel-next');
-        var totalSlides = 4;
+        var totalSlides = 5;
         var currentSlide = 0;
 
         var featureData = [
             { title: 'Dozens of styles', desc: 'Browse a growing library of creative styles. From anime and cartoon to retro digicam and oil painting — find the perfect look.' },
             { title: 'Creativity control', desc: 'Dial in exactly how much creative freedom you want. From subtle touch-ups to full artistic reimagination.' },
             { title: 'Know the cost upfront', desc: 'See exactly how many credits each creation will cost before you generate. No surprises, just beautiful images.' },
-            { title: 'High-quality results', desc: 'Get stunning, high-resolution images ready to share on social media, print, or save as lasting memories.' }
+            { title: 'High-quality results', desc: 'Get stunning, high-resolution images ready to share on social media, print, or save as lasting memories.' },
+            { title: 'Works on Apple Watch', desc: 'Browse your creations and start new ones right from your wrist. ImSpace goes wherever you go.' }
         ];
 
         function updateCarouselText(index) {
