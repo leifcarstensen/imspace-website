@@ -396,7 +396,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     min-height: 580px;
-    margin-right: -100px;
+    margin-right: calc(-180px - clamp(12px, 2vw, 24px));
     overflow: visible;
 }
 
