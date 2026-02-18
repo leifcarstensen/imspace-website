@@ -396,7 +396,8 @@ a {
     justify-content: flex-end;
     align-items: center;
     min-height: 580px;
-    margin-right: -80px;
+    margin-right: -40px;
+    overflow: visible;
 }
 
 .hero-mockup {
@@ -408,7 +409,7 @@ a {
 }
 
 .hero-mockup-1 {
-    width: 105%;
+    width: 85%;
     max-width: none;
     z-index: 1;
 }
