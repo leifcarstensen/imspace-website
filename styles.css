@@ -1076,6 +1076,13 @@ a {
     border: 1px solid rgba(248, 172, 58, 0.35);
     border-radius: var(--radius-sm);
     padding: 8px 10px;
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+}
+
+.pricing-features li.credits-highlight .check {
+    display: none;
 }
 
 .pricing-features li .check {
@@ -1510,12 +1517,14 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: var(--space-sm);
     }
 
     .hero-eyebrow-mobile {
         display: block;
         text-align: center;
         order: 1;
+        margin-bottom: 0;
     }
 
     .hero-eyebrow-desktop {
@@ -1528,7 +1537,7 @@ a {
 
     .hero-social-proof {
         order: 2;
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-sm);
     }
 
     .hero-headline {
@@ -1541,7 +1550,7 @@ a {
         width: 100%;
         min-height: auto;
         margin-right: 0;
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-md);
         justify-content: center;
     }
 
