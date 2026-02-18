@@ -299,8 +299,8 @@ a {
 
 .hero-split {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: var(--space-2xl);
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
     align-items: center;
 }
 
@@ -396,7 +396,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     min-height: 580px;
-    margin-right: -40px;
+    margin-right: -100px;
     overflow: visible;
 }
 
@@ -409,7 +409,7 @@ a {
 }
 
 .hero-mockup-1 {
-    width: 85%;
+    width: 115%;
     max-width: none;
     z-index: 1;
 }
