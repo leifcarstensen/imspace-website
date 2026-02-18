@@ -366,7 +366,7 @@ a {
     font-size: clamp(16px, 1.5vw, 18px);
     color: var(--text-secondary);
     margin-bottom: var(--space-2xl);
-    max-width: 520px;
+    max-width: 440px;
     line-height: 1.7;
 }
 
