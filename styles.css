@@ -409,7 +409,7 @@ a {
 }
 
 .hero-mockup-1 {
-    width: 115%;
+    width: 103.5%;
     max-width: none;
     z-index: 1;
 }
@@ -1069,6 +1069,15 @@ a {
     line-height: 1.5;
 }
 
+.pricing-features li.credits-highlight {
+    color: var(--text-primary);
+    font-weight: 700;
+    background: rgba(248, 172, 58, 0.12);
+    border: 1px solid rgba(248, 172, 58, 0.35);
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+}
+
 .pricing-features li .check {
     color: var(--primary);
     font-weight: 700;
@@ -1523,15 +1532,16 @@ a {
     }
 
     .hero-headline {
-        order: 3;
+        order: 4;
         margin-bottom: var(--space-lg);
     }
 
     .hero-mockups {
-        order: 4;
+        order: 3;
         width: 100%;
         min-height: auto;
         margin-right: 0;
+        margin-bottom: var(--space-lg);
         justify-content: center;
     }
 
