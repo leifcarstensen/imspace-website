@@ -79,7 +79,7 @@
     <main class="legal-page">
         <div class="legal-content">
             <h1>Privacy Policy</h1>
-            <p class="legal-updated">Last updated: February 12, 2026</p>
+            <p class="legal-updated">Last updated: February 19, 2026</p>
 
             <h2>1. Introduction</h2>
             <p>VoiceBeam GmbH ("we", "us", "our") operates the ImSpace mobile application and the website imspaceapp.com (collectively, the "Service"). This Privacy Policy explains what personal data we collect, how we use it, the legal bases for processing, and your rights regarding that data.</p>
@@ -90,7 +90,7 @@
             <p>When you use ImSpace, we collect and store the following data:</p>
             <ul>
                 <li><strong>Account information</strong> &mdash; provided through Sign in with Apple (unique identifier and optional relay email address)</li>
-                <li><strong>Photos you upload</strong> &mdash; images you choose to transform within the app (temporarily processed; see section 5)</li>
+                <li><strong>Photos you upload (may include faces)</strong> &mdash; images you choose to transform within the app (see section 5)</li>
                 <li><strong>Generated images</strong> &mdash; the stylized images created through the Service (stored based on your cloud storage preference; see section 6)</li>
                 <li><strong>Purchase history</strong> &mdash; records of subscriptions and credit pack purchases</li>
                 <li><strong>Credit balance</strong> &mdash; your current credit count</li>
@@ -117,9 +117,10 @@
             </ul>
             <p>We do not use your data for advertising, profiling, or any purpose other than providing the core features of the app.</p>
 
-            <h2>5. How We Process Photos</h2>
-            <p>When you create an image, we temporarily upload your photo to our servers to generate your result. We process images using cloud infrastructure hosted in <strong>Sweden (Azure Sweden Central)</strong>. Depending on the style and settings you select, your photo may be routed to different image-generation models hosted on this infrastructure.</p>
-            <p>Your original photo is deleted from our processing servers shortly after generation (typically within a few hours). We do not retain your original photos beyond the time necessary for processing.</p>
+            <h2>5. How We Process Photos and Face Data</h2>
+            <p>When you create an image, we upload your selected source photo to our backend to run image generation. This source photo may include face data if your photo contains a person. We process images using cloud infrastructure hosted in <strong>Sweden (Azure Sweden Central)</strong>. Depending on your style and settings, your photo may be routed to different image-generation models hosted on this infrastructure.</p>
+            <p>We use face data only to create the image output you requested. We do not perform face recognition, identity verification, or biometric template extraction, and we do not use your photos or generated images to train AI models.</p>
+            <p>Before the first cloud generation, the app presents an explicit in-app consent step for photo/face processing and third-party AI processing. You can decline and continue using the app without starting generation.</p>
 
             <h2>6. Cloud Storage Toggle</h2>
             <p>Cloud storage of generated images is optional. You can control this in the app settings:</p>
@@ -127,7 +128,8 @@
                 <li><strong>Cloud storage enabled (default):</strong> Your generated images are stored securely in your cloud account so you can access them across sessions.</li>
                 <li><strong>Cloud storage disabled:</strong> We do not keep a cloud copy of your generated images. You can still save results locally on your device.</li>
             </ul>
-            <p>Regardless of your cloud storage preference, the following data always remains stored in the cloud: your account identifier, purchase history, and credit balance. Temporary uploads for processing also occur regardless of this setting.</p>
+            <p>During generation, source photos and generated images are written to your cloud account so results can be delivered in-app. You can remove them at any time by deleting individual collections/images or deleting your account. If cloud backup is disabled, the app stops cloud syncing and will attempt to remove cloud-stored collections on the next connected session.</p>
+            <p>Regardless of your cloud storage preference, the following data always remains stored in the cloud: your account identifier, purchase history, and credit balance.</p>
 
             <h2>7. Where Your Data Is Processed</h2>
             <p>Your data is processed and stored in the following regions:</p>
@@ -161,12 +163,16 @@
                 </thead>
                 <tbody>
                     <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                        <td style="padding:8px 12px;">Uploaded photo (original)</td>
-                        <td style="padding:8px 12px;">Deleted after processing (typically within a few hours)</td>
+                        <td style="padding:8px 12px;">Uploaded source photo (including possible face data)</td>
+                        <td style="padding:8px 12px;">Until you delete the related collection/image, or until you delete your account</td>
                     </tr>
                     <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
                         <td style="padding:8px 12px;">Generated images (cloud)</td>
                         <td style="padding:8px 12px;">Until you delete them, or until you delete your account</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
+                        <td style="padding:8px 12px;">Temporary processing copies</td>
+                        <td style="padding:8px 12px;">Deleted after processing (typically within a few hours)</td>
                     </tr>
                     <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
                         <td style="padding:8px 12px;">Account identifier</td>

@@ -76,7 +76,7 @@
     <main class="legal-page">
         <div class="legal-content">
             <h1>Datenschutzerkl&auml;rung</h1>
-            <p class="legal-updated">Zuletzt aktualisiert: 12. Februar 2026</p>
+            <p class="legal-updated">Zuletzt aktualisiert: 19. Februar 2026</p>
 
             <h2>1. Einleitung</h2>
             <p>Die VoiceBeam GmbH (&bdquo;wir&ldquo;, &bdquo;uns&ldquo;, &bdquo;unser&ldquo;) betreibt die mobile Anwendung ImSpace und die Website imspaceapp.com (zusammen der &bdquo;Dienst&ldquo;). Diese Datenschutzerkl&auml;rung erl&auml;utert, welche personenbezogenen Daten wir erheben, wie wir sie verwenden, auf welcher Rechtsgrundlage die Verarbeitung erfolgt und welche Rechte du in Bezug auf deine Daten hast.</p>
@@ -87,7 +87,7 @@
             <p>Bei der Nutzung von ImSpace erheben und speichern wir folgende Daten:</p>
             <ul>
                 <li><strong>Kontoinformationen</strong> &mdash; bereitgestellt &uuml;ber &bdquo;Mit Apple anmelden&ldquo; (eindeutige Kennung und optionale Relay-E-Mail-Adresse)</li>
-                <li><strong>Von dir hochgeladene Fotos</strong> &mdash; Bilder, die du in der App zur Transformation ausw&auml;hlst (vor&uuml;bergehend verarbeitet; siehe Abschnitt 5)</li>
+                <li><strong>Von dir hochgeladene Fotos (k&ouml;nnen Gesichter enthalten)</strong> &mdash; Bilder, die du in der App zur Transformation ausw&auml;hlst (siehe Abschnitt 5)</li>
                 <li><strong>Generierte Bilder</strong> &mdash; die stilisierten Bilder, die durch den Dienst erstellt werden (Speicherung basierend auf deinen Cloud-Speicher-Einstellungen; siehe Abschnitt 6)</li>
                 <li><strong>Kaufhistorie</strong> &mdash; Aufzeichnungen &uuml;ber Abonnements und Credit-Paket-K&auml;ufe</li>
                 <li><strong>Credit-Guthaben</strong> &mdash; dein aktueller Credit-Stand</li>
@@ -114,9 +114,10 @@
             </ul>
             <p>Wir verwenden deine Daten nicht f&uuml;r Werbung, Profiling oder andere Zwecke als die Bereitstellung der Kernfunktionen der App.</p>
 
-            <h2>5. Wie wir Fotos verarbeiten</h2>
-            <p>Wenn du ein Bild erstellst, laden wir dein Foto vor&uuml;bergehend auf unsere Server hoch, um dein Ergebnis zu generieren. Wir verarbeiten Bilder &uuml;ber eine Cloud-Infrastruktur in <strong>Schweden (Azure Sweden Central)</strong>. Abh&auml;ngig vom gew&auml;hlten Stil und den Einstellungen kann dein Foto an verschiedene Bildgenerierungsmodelle auf dieser Infrastruktur weitergeleitet werden.</p>
-            <p>Dein Originalfoto wird kurz nach der Generierung von unseren Verarbeitungsservern gel&ouml;scht (in der Regel innerhalb weniger Stunden). Wir bewahren deine Originalfotos nicht l&auml;nger als f&uuml;r die Verarbeitung notwendig auf.</p>
+            <h2>5. Wie wir Fotos und Gesichtsdaten verarbeiten</h2>
+            <p>Wenn du ein Bild erstellst, laden wir dein ausgew&auml;hltes Quellfoto auf unser Backend hoch, um die Bildgenerierung auszuf&uuml;hren. Dieses Quellfoto kann Gesichtsdaten enthalten, wenn auf dem Foto eine Person zu sehen ist. Wir verarbeiten Bilder &uuml;ber eine Cloud-Infrastruktur in <strong>Schweden (Azure Sweden Central)</strong>. Abh&auml;ngig vom gew&auml;hlten Stil und den Einstellungen kann dein Foto an verschiedene Bildgenerierungsmodelle auf dieser Infrastruktur weitergeleitet werden.</p>
+            <p>Wir verwenden Gesichtsdaten nur, um das von dir angeforderte Bild zu erzeugen. Wir f&uuml;hren keine Gesichtserkennung, keine Identit&auml;tspr&uuml;fung und keine Erstellung biometrischer Templates durch. Wir verwenden deine Fotos oder generierten Bilder nicht zum Training von KI-Modellen.</p>
+            <p>Vor der ersten Cloud-Generierung zeigt die App einen ausdr&uuml;cklichen Einwilligungsdialog f&uuml;r Foto-/Gesichtsdatenverarbeitung und KI-Verarbeitung durch Drittanbieter. Du kannst ablehnen und die App weiter nutzen, ohne eine Generierung zu starten.</p>
 
             <h2>6. Cloud-Speicher-Option</h2>
             <p>Die Cloud-Speicherung generierter Bilder ist optional. Du kannst dies in den App-Einstellungen steuern:</p>
@@ -124,7 +125,8 @@
                 <li><strong>Cloud-Speicher aktiviert (Standard):</strong> Deine generierten Bilder werden sicher in deinem Cloud-Konto gespeichert, sodass du sitzungs&uuml;bergreifend darauf zugreifen kannst.</li>
                 <li><strong>Cloud-Speicher deaktiviert:</strong> Wir bewahren keine Cloud-Kopie deiner generierten Bilder auf. Du kannst Ergebnisse weiterhin lokal auf deinem Ger&auml;t speichern.</li>
             </ul>
-            <p>Unabh&auml;ngig von deinen Cloud-Speicher-Einstellungen bleiben folgende Daten immer in der Cloud gespeichert: deine Kontokennung, Kaufhistorie und dein Credit-Guthaben. Tempor&auml;re Uploads zur Verarbeitung erfolgen ebenfalls unabh&auml;ngig von dieser Einstellung.</p>
+            <p>W&auml;hrend der Generierung werden Quellfotos und generierte Bilder in deinem Cloud-Konto gespeichert, damit die Ergebnisse in der App bereitgestellt werden k&ouml;nnen. Du kannst diese jederzeit entfernen, indem du einzelne Collections/Bilder oder dein gesamtes Konto l&ouml;schst. Wenn Cloud-Backup deaktiviert ist, stoppt die App die Cloud-Synchronisierung und versucht, cloudgespeicherte Collections in der n&auml;chsten verbundenen Sitzung zu entfernen.</p>
+            <p>Unabh&auml;ngig von deinen Cloud-Speicher-Einstellungen bleiben folgende Daten immer in der Cloud gespeichert: deine Kontokennung, Kaufhistorie und dein Credit-Guthaben.</p>
 
             <h2>7. Wo deine Daten verarbeitet werden</h2>
             <p>Deine Daten werden in folgenden Regionen verarbeitet und gespeichert:</p>
@@ -158,12 +160,16 @@
                 </thead>
                 <tbody>
                     <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                        <td style="padding:8px 12px;">Hochgeladenes Foto (Original)</td>
-                        <td style="padding:8px 12px;">Gel&ouml;scht nach der Verarbeitung (in der Regel innerhalb weniger Stunden)</td>
+                        <td style="padding:8px 12px;">Hochgeladenes Quellfoto (inkl. m&ouml;glicher Gesichtsdaten)</td>
+                        <td style="padding:8px 12px;">Bis du die zugeh&ouml;rige Collection/das Bild l&ouml;schst oder dein Konto l&ouml;schst</td>
                     </tr>
                     <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
                         <td style="padding:8px 12px;">Generierte Bilder (Cloud)</td>
                         <td style="padding:8px 12px;">Bis du sie l&ouml;schst oder dein Konto l&ouml;schst</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
+                        <td style="padding:8px 12px;">Tempor&auml;re Verarbeitungskopien</td>
+                        <td style="padding:8px 12px;">Gel&ouml;scht nach der Verarbeitung (in der Regel innerhalb weniger Stunden)</td>
                     </tr>
                     <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
                         <td style="padding:8px 12px;">Kontokennung</td>
