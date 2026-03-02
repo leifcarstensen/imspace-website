@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NQVFXWHKF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5NQVFXWHKF');
+    </script>
+
+    <title>AI Headshots App — No Studio, No Subscription | ImSpace</title>
+    <meta name="description" content="Get professional AI headshots for LinkedIn, job applications, and dating profiles in seconds. No studio appointment. No subscription. Free to try on iPhone.">
+    <meta name="keywords" content="ai headshot app,ai headshots iphone,linkedin headshot ai,professional headshot generator,ai portrait app,headshot app no subscription,linkedin photo maker,job application photo ai,dating profile photo ai">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Headshots — No Studio, No Subscription | ImSpace">
+    <meta property="og:description" content="Get professional AI headshots for LinkedIn, job applications, and dating profiles in seconds. No studio. No subscription. Free to try on iPhone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imspaceapp.com/headshots/">
+    <meta property="og:image" content="https://imspaceapp.com/assets/og-image.png">
+    <meta property="og:site_name" content="ImSpace">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Headshots — No Studio, No Subscription | ImSpace">
+    <meta name="twitter:description" content="Get professional AI headshots for LinkedIn, job applications, and dating profiles in seconds. No studio. No subscription. Free to try on iPhone.">
+    <meta name="twitter:image" content="https://imspaceapp.com/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/FavIcon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/FavIcon.png">
+    <link rel="apple-touch-icon" href="../assets/FavIcon.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://imspaceapp.com/headshots/">
+    <link rel="alternate" hreflang="en" href="https://imspaceapp.com/headshots/">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles.css?v=17">
+
+    <style>
+        /* Page-specific overrides */
+        .hs-hero {
+            padding: var(--space-5xl) 0 var(--space-3xl);
+            text-align: center;
+        }
+
+        .hs-hero-eyebrow {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: var(--space-lg);
+        }
+
+        .hs-hero-headline {
+            font-size: clamp(38px, 5.5vw, 68px);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xl);
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hs-hero-sub {
+            font-size: clamp(17px, 1.8vw, 20px);
+            color: var(--text-secondary);
+            max-width: 580px;
+            margin: 0 auto var(--space-xl);
+            line-height: 1.65;
+        }
+
+        .hs-hero-pills {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .hs-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--background-alt);
+            border: 1px solid rgba(0,0,0,0.07);
+            border-radius: var(--radius-full);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .hs-pill .check {
+            color: var(--primary);
+        }
+
+        /* Before/After placeholder */
+        .hs-before-after {
+            max-width: 760px;
+            margin: 0 auto var(--space-5xl);
+            background: var(--background-alt);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+
+        .hs-before-after-col {
+            padding: var(--space-xl);
+            text-align: center;
+        }
+
+        .hs-before-after-col + .hs-before-after-col {
+            border-left: 1px solid rgba(0,0,0,0.06);
+            background: var(--background);
+        }
+
+        .hs-before-after-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: var(--space-md);
+        }
+
+        .hs-before-after-col + .hs-before-after-col .hs-before-after-label {
+            color: var(--primary);
+        }
+
+        .hs-img-placeholder {
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, rgba(248,172,58,0.1) 0%, rgba(240,84,90,0.1) 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: rgba(0,0,0,0.15);
+        }
+
+        /* NOTE FOR DEVELOPER: Replace .hs-img-placeholder with actual before/after images.
+           Use class="hs-before-img" and "hs-after-img" on <img> tags.
+           Recommended size: ~400×530px per image */
+
+        .hs-before-img,
+        .hs-after-img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            display: block;
+        }
+
+        .hs-divider-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--background);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-full);
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        /* Use cases grid for headshots */
+        .hs-usecases {
+            padding: var(--space-5xl) 0;
+            background: var(--background-alt);
+        }
+
+        /* Pricing comparison */
+        .hs-price-compare {
+            padding: var(--space-5xl) 0;
+        }
+
+        .hs-price-table {
+            max-width: 680px;
+            margin: 0 auto;
+            background: var(--background);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .hs-price-table-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: var(--background-dark);
+            padding: var(--space-lg) var(--space-xl);
+        }
+
+        .hs-price-table-header span {
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+        }
+
+        .hs-price-table-header span:first-child {
+            text-align: left;
+        }
+
+        .hs-price-table-header .highlight {
+            color: var(--primary);
+        }
+
+        .hs-price-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: var(--space-lg) var(--space-xl);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            align-items: center;
+        }
+
+        .hs-price-row:last-child {
+            border-bottom: none;
+        }
+
+        .hs-price-row span {
+            font-size: 15px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .hs-price-row span:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: left;
+        }
+
+        .hs-price-row .bad {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .hs-price-row .good {
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        /* Steps section */
+        .hs-steps {
+            padding: var(--space-5xl) 0;
+            background: var(--background-dark);
+            text-align: center;
+        }
+
+        .hs-steps .section-headline {
+            color: var(--text-light);
+        }
+
+        .hs-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+            max-width: 820px;
+            margin: 0 auto var(--space-3xl);
+        }
+
+        .hs-step {
+            text-align: center;
+        }
+
+        .hs-step-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+
+        .hs-step-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: var(--space-sm);
+        }
+
+        .hs-step-desc {
+            font-size: 15px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.6;
+        }
+
+        /* FAQ */
+        .hs-faq {
+            padding: var(--space-5xl) 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hs-before-after {
+                grid-template-columns: 1fr;
+            }
+
+            .hs-before-after-col + .hs-before-after-col {
+                border-left: none;
+                border-top: 1px solid rgba(0,0,0,0.06);
+            }
+
+            .hs-divider-label {
+                display: none;
+            }
+
+            .hs-steps-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .hs-price-table-header,
+            .hs-price-row {
+                padding: var(--space-md);
+            }
+
+            .hs-price-table-header span,
+            .hs-price-row span {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="../assets/LogoDark.svg" alt="ImSpace" class="logo-img">
+            </a>
+            <div class="nav-center">
+                <a href="/#features" class="nav-link">Features</a>
+                <a href="/#pricing" class="nav-link">Pricing</a>
+                <a href="/#faq" class="nav-link">FAQ</a>
+                <a href="mailto:info@voicebeam.de" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="/de/headshots/" class="nav-link lang-switch" title="Deutsch">DE</a>
+                <a href="https://apps.apple.com/app/imspace-ai-photo-styles/id6759071058" class="nav-cta" target="_blank" rel="noopener">Get Free Headshots</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="/#features" class="mobile-menu-link">Features</a>
+            <a href="/#pricing" class="mobile-menu-link">Pricing</a>
+            <a href="/#faq" class="mobile-menu-link">FAQ</a>
+            <a href="mailto:info@voicebeam.de" class="mobile-menu-link">Contact</a>
+            <a href="/de/headshots/" class="mobile-menu-link">Deutsch</a>
+            <a href="https://apps.apple.com/app/imspace-ai-photo-styles/id6759071058" class="mobile-menu-cta" target="_blank" rel="noopener">Get Free Headshots</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hs-hero">
+        <div class="container">
+            <span class="hs-hero-eyebrow">AI Headshots — iPhone App</span>
+            <h1 class="hs-hero-headline">Professional headshots from any selfie.<br><span class="gradient-text">No studio. No subscription.</span></h1>
+            <p class="hs-hero-sub">Turn any clear selfie into a polished LinkedIn portrait, job application photo, or dating profile headshot in under a minute. Pay only for what you create.</p>
+
+            <div class="hs-hero-pills">
+                <span class="hs-pill"><span class="check">✓</span> No studio appointment</span>
+                <span class="hs-pill"><span class="check">✓</span> No subscription required</span>
+                <span class="hs-pill"><span class="check">✓</span> No prompts needed</span>
+                <span class="hs-pill"><span class="check">✓</span> EU privacy — no data training</span>
+            </div>
+
+            <a href="https://apps.apple.com/app/imspace-ai-photo-styles/id6759071058" class="app-store-link" target="_blank" rel="noopener">
+                <img src="../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="app-store-badge">
+            </a>
+            <p class="hero-subtext" style="margin-top: 1rem;">Free to try · Starts at $0.04 per headshot</p>
+
+            <!-- Before / After -->
+            <!-- TODO: Replace placeholder divs with real before/after images.
+                 Recommended: selfie photo on left, polished LinkedIn portrait on right.
+                 Image size: ~400×530px each, format: WebP or PNG. -->
+            <div class="hs-before-after">
+                <div class="hs-before-after-col">
+                    <p class="hs-before-after-label">Before — Your selfie</p>
+                    <div class="hs-img-placeholder">📷</div>
+                </div>
+                <div class="hs-before-after-col">
+                    <p class="hs-before-after-label">After — AI headshot</p>
+                    <div class="hs-img-placeholder">✨</div>
+                </div>
+                <span class="hs-divider-label">ImSpace</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="hs-usecases">
+        <div class="container">
+            <h2 class="section-headline">One app. Every headshot situation.</h2>
+            <p class="section-subheadline">Whether you need a polished LinkedIn portrait today or a great photo for a job application tomorrow, ImSpace has a style for it.</p>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F4BC;</div>
+                    <h3 class="use-case-title">LinkedIn portraits</h3>
+                    <p class="use-case-desc">Make a strong first impression with a business-ready headshot that looks like it was taken by a professional photographer.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F4CB;</div>
+                    <h3 class="use-case-title">Job applications &amp; CVs</h3>
+                    <p class="use-case-desc">A clean, professional headshot for your CV, company bio, or conference speaker page — created in seconds from any selfie.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F48C;</div>
+                    <h3 class="use-case-title">Dating profiles</h3>
+                    <p class="use-case-desc">Put your best self forward with warm, flattering portrait styles. Natural-looking results, not over-edited or obviously AI.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F4F1;</div>
+                    <h3 class="use-case-title">Social media profiles</h3>
+                    <p class="use-case-desc">Update your profile photo across every platform without scheduling a photography session or buying a subscription.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Comparison -->
+    <section class="hs-price-compare">
+        <div class="container">
+            <h2 class="section-headline">Professional headshots without the price tag.</h2>
+            <p class="section-subheadline">Traditional headshot photography costs hundreds of dollars and days of your time. ImSpace costs cents and takes under a minute.</p>
+
+            <div class="hs-price-table">
+                <div class="hs-price-table-header">
+                    <span>Method</span>
+                    <span>Cost</span>
+                    <span class="highlight">ImSpace</span>
+                </div>
+                <div class="hs-price-row">
+                    <span>Professional photographer</span>
+                    <span class="bad">$200–$500</span>
+                    <span class="good">From $0.04</span>
+                </div>
+                <div class="hs-price-row">
+                    <span>Time required</span>
+                    <span class="bad">Half day + wait</span>
+                    <span class="good">Under 1 minute</span>
+                </div>
+                <div class="hs-price-row">
+                    <span>Subscription</span>
+                    <span class="bad">N/A (but expensive)</span>
+                    <span class="good">Not required</span>
+                </div>
+                <div class="hs-price-row">
+                    <span>Number of looks</span>
+                    <span class="bad">1–2 outfits</span>
+                    <span class="good">Unlimited styles</span>
+                </div>
+                <div class="hs-price-row">
+                    <span>Redo / tweak</span>
+                    <span class="bad">Book another session</span>
+                    <span class="good">Tap and retry instantly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="hs-steps">
+        <div class="container">
+            <h2 class="section-headline">Three taps to a professional headshot.</h2>
+            <div class="hs-steps-grid">
+                <div class="hs-step">
+                    <div class="hs-step-number">1</div>
+                    <h3 class="hs-step-title">Take or pick a selfie</h3>
+                    <p class="hs-step-desc">Use any clear photo — a recent selfie or a photo from your camera roll. Good natural light works best.</p>
+                </div>
+                <div class="hs-step">
+                    <div class="hs-step-number">2</div>
+                    <h3 class="hs-step-title">Choose a headshot style</h3>
+                    <p class="hs-step-desc">Browse the Headshots &amp; Portraits category. Pick from LinkedIn portrait, executive clean, dating profile, and more.</p>
+                </div>
+                <div class="hs-step">
+                    <div class="hs-step-number">3</div>
+                    <h3 class="hs-step-title">Download &amp; use anywhere</h3>
+                    <p class="hs-step-desc">Your AI headshot is ready in seconds. Save it to your camera roll and use it on LinkedIn, your CV, or dating apps.</p>
+                </div>
+            </div>
+
+            <a href="https://apps.apple.com/app/imspace-ai-photo-styles/id6759071058" class="app-store-link" target="_blank" rel="noopener">
+                <img src="../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="app-store-badge app-store-badge-white">
+            </a>
+            <p class="headshots-sub">Free to download · Pay only for what you create</p>
+        </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="trust">
+        <div class="container">
+            <h2 class="section-headline">Your headshot photos stay private.</h2>
+            <p class="section-subheadline">We treat your photos with the same care you would. No data training. No selling your images. EU-standard privacy built in from day one.</p>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">&#x1F5D1;</div>
+                    <h3 class="trust-title">Photos deleted after generation</h3>
+                    <p class="trust-desc">Your original selfie is removed from our servers immediately after your headshot is created. We don't keep them.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">&#x1F6E1;</div>
+                    <h3 class="trust-title">No training on your photos</h3>
+                    <p class="trust-desc">Your face and photos are never used to train AI models. Your data is yours alone — always.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">&#x1F512;</div>
+                    <h3 class="trust-title">You own every image</h3>
+                    <p class="trust-desc">Every headshot you generate belongs to you. Use it commercially — LinkedIn, CVs, company websites — no restrictions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="hs-faq faq">
+        <div class="container">
+            <h2 class="section-headline">Headshot questions, answered.</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How realistic do the AI headshots look?</h3>
+                    <p class="faq-answer">ImSpace uses state-of-the-art image generation to produce photorealistic portraits. The quality is high enough for LinkedIn profiles and job applications. Best results come from clear, well-lit selfies with a simple background.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do I need a subscription to get headshots?</h3>
+                    <p class="faq-answer">No subscription required. You can buy a Credit 100 pack ($4.99) and create dozens of headshot variations as a one-time purchase. Subscriptions are available if you want monthly credits at a lower per-headshot rate, but they're entirely optional.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I use my AI headshot on LinkedIn?</h3>
+                    <p class="faq-answer">Yes. You own 100% of every image you generate. You can use ImSpace headshots on LinkedIn, in your CV, on a company website, or as a profile photo anywhere you need one. Commercial use is included.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What kind of selfie works best?</h3>
+                    <p class="faq-answer">A clear, well-lit selfie in natural daylight with a simple background produces the best results. Face the camera directly, leave some space around your head, and avoid heavy filters or dark lighting. You don't need to look perfectly polished — the style handles that.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Are my photos used to train AI?</h3>
+                    <p class="faq-answer">No. Your photos are never used for AI training. They're processed on secure EU servers, deleted after your headshot is generated, and never shared with third parties.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How many headshots can I make?</h3>
+                    <p class="faq-answer">As many as you like. Each headshot costs a small number of credits. A Credit 100 pack ($4.99) gives you enough to create dozens of variations across different styles. No limit on the number of headshots per session.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Is ImSpace available on Android?</h3>
+                    <p class="faq-answer">ImSpace is currently available on iPhone (iOS 17 or later). An Android version is planned for the future.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How is ImSpace different from Aragon or HeadshotPro?</h3>
+                    <p class="faq-answer">Aragon and HeadshotPro require you to upload 10–20 photos, wait hours for model training, and pay $29–$59 upfront. ImSpace is instant — upload one selfie, pick a style, get your headshot in seconds. No training wait. No $30+ fee. Pay only for what you create.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <img src="../assets/Splash_Logo.png" alt="ImSpace" class="final-cta-logo">
+            <h2 class="final-cta-headline">Get your AI headshot today.</h2>
+            <p class="final-cta-text">Free to download. No subscription required. Professional results in under a minute.</p>
+            <a href="https://apps.apple.com/app/imspace-ai-photo-styles/id6759071058" class="app-store-link" target="_blank" rel="noopener">
+                <img src="../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="app-store-badge app-store-badge-white">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+                <a href="/impressum">Impressum</a>
+                <a href="mailto:info@voicebeam.de">Contact</a>
+                <a href="/">ImSpace Home</a>
+            </div>
+            <p class="copyright">&copy; 2026 VoiceBeam GmbH. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Structured Data: App + Headshots -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ImSpace — AI Headshots",
+      "operatingSystem": "iOS",
+      "applicationCategory": "PhotoApplication",
+      "applicationSubCategory": "HeadshotApplication",
+      "description": "Get professional AI headshots for LinkedIn, job applications, and dating profiles in seconds. No studio appointment. No subscription required.",
+      "featureList": ["AI headshots", "LinkedIn portrait", "professional headshot", "no subscription required", "no prompts required", "EU privacy", "dating profile photo", "job application photo", "instant headshots"],
+      "url": "https://apps.apple.com/app/imspace-ai-photo-styles/id6759071058",
+      "downloadUrl": "https://apps.apple.com/app/imspace-ai-photo-styles/id6759071058",
+      "offers": [
+        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to download with starter credits" },
+        { "@type": "Offer", "price": "4.99", "priceCurrency": "USD", "description": "Credit 100 pack — enough for dozens of headshots" }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I need a subscription to get AI headshots?", "acceptedAnswer": { "@type": "Answer", "text": "No subscription required. You can buy a Credit 100 pack ($4.99) and create dozens of headshot variations as a one-time purchase. Subscriptions are available but entirely optional." } },
+        { "@type": "Question", "name": "Can I use my AI headshot on LinkedIn?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You own 100% of every image you generate. You can use ImSpace headshots on LinkedIn, in your CV, on a company website, or as a profile photo anywhere. Commercial use is included." } },
+        { "@type": "Question", "name": "How is ImSpace different from Aragon or HeadshotPro?", "acceptedAnswer": { "@type": "Answer", "text": "Aragon and HeadshotPro require you to upload 10–20 photos, wait hours for model training, and pay $29–$59 upfront. ImSpace is instant — upload one selfie, pick a style, get your headshot in seconds. No training wait. No $30+ fee. Pay only for what you create." } },
+        { "@type": "Question", "name": "Are my photos used to train AI?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your photos are never used for AI training. They're processed on secure EU servers, deleted after your headshot is generated, and never shared with third parties." } },
+        { "@type": "Question", "name": "What kind of selfie works best for AI headshots?", "acceptedAnswer": { "@type": "Answer", "text": "A clear, well-lit selfie in natural daylight with a simple background produces the best results. Face the camera directly and leave some space around your head. You don't need to look perfectly polished — the style handles that." } }
+      ]
+    }
+    </script>
+
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
+    <!-- Page Scripts -->
+    <script>
+    (function() {
+        'use strict';
+        var navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        var hamburger = document.getElementById('hamburger');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+            });
+            var menuLinks = mobileMenu.querySelectorAll('a');
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                });
+            }
+        }
+    })();
+    </script>
+</body>
+</html>

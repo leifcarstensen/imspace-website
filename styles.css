@@ -1684,3 +1684,124 @@ a {
         border-radius: 20px;
     }
 }
+
+/* ============================================
+   Headshots Promo Section
+   ============================================ */
+
+.headshots-promo {
+    padding: var(--space-5xl) 0;
+    background: var(--background-dark);
+    text-align: center;
+}
+
+.headshots-promo .section-headline {
+    color: var(--text-light);
+    margin-bottom: var(--space-xl);
+}
+
+.headshots-promo .section-subheadline {
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: var(--space-2xl);
+}
+
+.headshots-price-callout {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: rgba(248, 172, 58, 0.1);
+    border: 1px solid rgba(248, 172, 58, 0.25);
+    border-radius: var(--radius-full);
+    padding: var(--space-sm) var(--space-xl);
+    margin-bottom: var(--space-3xl);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.headshots-price-callout .price-old {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.45);
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.headshots-price-callout .price-arrow {
+    color: rgba(248, 172, 58, 0.5);
+    font-size: 14px;
+}
+
+.headshots-price-callout .price-new {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.headshots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-3xl);
+}
+
+.headshot-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.headshot-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(248, 172, 58, 0.3);
+    transform: translateY(-4px);
+}
+
+.headshot-card-icon {
+    font-size: 36px;
+    margin-bottom: var(--space-md);
+    line-height: 1;
+}
+
+.headshot-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: var(--space-sm);
+}
+
+.headshot-card-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+.headshots-sub {
+    margin-top: var(--space-lg);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive: headshots section */
+@media (max-width: 1024px) {
+    .headshots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .headshots-promo {
+        padding: var(--space-3xl) 0;
+    }
+
+    .headshots-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .headshots-price-callout {
+        flex-direction: column;
+        gap: var(--space-xs);
+        text-align: center;
+    }
+}
